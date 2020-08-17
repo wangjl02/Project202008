@@ -1,0 +1,76 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  18D05
+* Top Cell Name: V5NBL_FD2D1A
+* View Name:     schematic
+* Netlisted on:  Aug 11 11:22:21 2020
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 0 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        gnd!
++        vdd!
+
+*.PIN vss!
+*+    gnd!
+*+    vdd!
+
+************************************************************************
+* Library Name: 18D05
+* Cell Name:    V5NBL_FD2D1A
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT V5NBL_FD2D1A CK D Q QN RN
+*.PININFO CK:I D:I RN:I Q:O QN:O
+XPM34 net18 RN vss! vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM32 net17 net_62 net18 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM30 Q net_69 vss! vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM28 net19 net_21 net_69 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM26 vss! net_17 QN vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM24 net_21 net_30 net_17 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM23 net_62 net_51 net_21 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM22 vss! net_30 net_51 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM20 net_42 net_51 net17 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM18 vss! net_42 net_62 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM17 net_17 net_69 vss! vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XNM1 net_40 D net_42 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XNM0 vss! net_30 net_40 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM11 vss! RN net19 vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM0 net_30 CK vss! vss! vdd! SUB nch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM36 vdd! net_42 net_62 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM35 Q net_69 vdd! vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM33 net_69 net_21 vdd! vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM31 net_59 D net_42 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM29 vdd! RN net_67 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM27 vdd! net_17 QN vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM25 net_17 net_69 vdd! vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM21 vdd! RN net_69 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+XPM19 net_62 net_30 net_21 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM16 net_67 net_62 vdd! vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM14 net_21 net_51 net_17 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM12 vdd! net_30 net_51 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM10 vdd! net_51 net_59 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM9 net_42 net_30 net_67 vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n + w=10u option_vop=7.7
+XPM8 net_30 CK vdd! vdd! vss! vdd! SUB pch_svt_iso_nbl_5p0v m=1 l=500n w=10u + option_vop=7.7
+.ENDS
+
+
+.SUBCKT pch_svt_iso_nbl_5p0v D G S B ISUB ISO SUB 
+*.PININFO  D:B G:B S:B B:B ISUB:B ISO:B SUB:B
+.ENDS
+
+.SUBCKT nch_svt_iso_nbl_5p0v D G S B ISO SUB 
+*.PININFO  D:B G:B S:B B:B ISO:B SUB:B
+.ENDS
